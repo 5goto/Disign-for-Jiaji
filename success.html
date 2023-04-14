@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/succ.css" />
+    <title>Success!</title>
+  </head>
+  <body>
+    <div class="success-main">
+      <div class="pic">
+        <img src="/img/success/callback.png" alt="" />
+      </div>
+      <div class="message">
+        <h1>Обратная связь</h1>
+        <p>
+          Ваш запрос успешно обработан. <br />
+          Мы свяжемся с вами в ближайшее время!
+        </p>
+        <a th:href="@{/}">Назад к просмотру</a>
+      </div>
+    </div>
+  </body>
+</html>

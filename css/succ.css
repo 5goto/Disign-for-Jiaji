@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter" !important ;
+}
+
+.success-main {
+  width: 30vw;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  margin-top: 5%;
+  /* justify-content: space-around; */
+  flex-direction: column;
+  box-shadow: 3px 5px 5px 5px #27a4ba;
+}
+
+.message {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message h1 {
+  font-size: 48px;
+  color: #27a4ba;
+}
+
+.message p {
+  font-size: 24px;
+  color: #212121;
+}
+
+.message a {
+  color: #27a4ba;
+}
+
+img {
+  width: 60%;
+  margin: auto;
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+}
