@@ -1410,7 +1410,8 @@ li a {
     text-align: justify;
   }
   .registration,
-  .contacts {
+  .contacts,
+  .province {
     height: 100%;
   }
 
