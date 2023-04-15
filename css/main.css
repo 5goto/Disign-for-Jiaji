@@ -229,6 +229,7 @@ nav ul a {
   flex: 0 0 50%;
   display: flex;
   align-items: center;
+  transition: 0.3s ease;
 }
 
 .member-couple .member:hover p {
@@ -297,6 +298,14 @@ nav ul a {
   border: 3px solid #07a2d8;
 }
 
+.inner-invite a:hover p {
+  color: white !important;
+}
+
+.inner-invite a:hover {
+  background-color: #07a2d8;
+}
+
 .inner-invite a p {
   width: 250px;
   height: 30px;
@@ -362,7 +371,7 @@ nav ul a {
 
 .boat {
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   left: 5%;
   width: 31%;
 }
@@ -1320,15 +1329,15 @@ li a {
   min-width: 270px;
   height: 270px;
   overflow: hidden;
-  border-left: 1px solid #c3c3c3;
+  /* border-left: 1px solid #c3c3c3;
   border-right: 1px solid #c3c3c3;
-  background-color: #f6f6f6;
+  background-color: #f6f6f6; */
   display: flex;
   align-items: center;
 }
 
 .slider-item:hover {
-  box-shadow: inset 0px 0px 0px 10px #005da0;
+  box-shadow: inset 0px 0px 0px 5px #005da0;
 }
 
 .slider-item img {
@@ -1342,7 +1351,8 @@ li a {
 
 .other-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
 }
@@ -1350,20 +1360,28 @@ li a {
 .other-sum {
   vertical-align: middle;
   list-style: none;
-  box-shadow: inset 0px 0px 0px 2px #005da0;
+  background-color: #005da0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 24px;
   cursor: pointer;
-  /* justify-content: center; */
+  color: white;
+  border-radius: 2px;
+  border: transparent solid 2px;
+  transition: 0.3s ease;
 }
 
 .other-sum:hover {
-  background-color: #005da0;
-  color: white;
+  background-color: white;
+  color: #3f3a34;
+  border: 2px solid #3f3a34;
 }
 
 .other-sum p {
-  flex: 0 0 70%;
+  font-size: 18px;
+  margin-top: 12px;
+  width: 90%;
+  font-weight: 500;
 }
 
 @media (max-width: 1500px) {
@@ -1412,7 +1430,15 @@ li a {
   }
 
   .wuan-comp-content {
-    height: 400px;
+    height: 100%;
+  }
+
+  .slider-items {
+    height: 100%;
+  }
+
+  .wuan-companies {
+    height: 100%;
   }
 
   .inner-invite a {
@@ -1550,21 +1576,29 @@ li a {
   .blue-block {
     display: none;
   }
-}
 
-.invite,
-.invite-content {
-  height: 100%;
-}
+  .invite,
+  .invite-content,
+  .inner-invite,
+  .about-content,
+  .about-company,
+  .other-content {
+    height: 100%;
+  }
 
-.wave {
-  top: 0% !important;
-  height: auto;
-}
+  .wave {
+    top: 0% !important;
+    height: auto;
+  }
 
-.boat {
-  top: 40%;
-  left: 0;
+  .boat {
+    top: 40%;
+    left: 0;
+  }
+
+  .other-companies {
+    height: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1665,7 +1699,8 @@ li a {
   }
 
   .invite {
-    height: 300px;
+    /* height: 300px; */
+    padding: 0 40px 0 40px;
   }
 
   .check-icon-and-text {
@@ -1678,6 +1713,14 @@ li a {
     width: 100%;
   }
 
+  .inner-invite a {
+    min-width: 200px;
+    max-width: 260px;
+    min-height: 63px;
+    margin: auto;
+    border-radius: 3px;
+  }
+
   .bottom-part {
     flex: 0 0 10%;
   }
@@ -1687,6 +1730,7 @@ li a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 
   .invite-content .inner-invite h3 {
@@ -1705,7 +1749,8 @@ li a {
   }
 
   .invite {
-    height: 500px;
+    max-height: 700px;
+    min-height: 300px;
   }
 
   .fs48 {
@@ -1754,6 +1799,7 @@ li a {
   .sub-btn-callback button {
     flex: 1 0 100%;
     margin: auto;
+    max-width: 100%;
   }
 
   .province p {
@@ -1765,13 +1811,17 @@ li a {
   }
 
   .column-elements {
-    width: 70%;
+    width: 60%;
     margin: auto;
   }
 
   #wuan-info,
   .wuam-content {
     height: 100%;
+  }
+
+  .province-info {
+    margin: 0;
   }
 
   .about-superblock {
@@ -1852,7 +1902,7 @@ li a {
   .registration-main-form button {
     /* display: block !important; */
     position: static;
-    left: 20%;
+    /* left: 20%; */
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -1868,11 +1918,22 @@ li a {
 
   .registration-main-form button:nth-child(2) {
     align-self: center;
-    width: 250px !important;
+    width: 450px !important;
+    height: 50px;
   }
 
-  .registration-main-form button p {
-    width: 250px !important;
+  .registration-main-form form {
+    width: 100%;
+  }
+
+  form .reg-button {
+    flex: 1 1 60px;
+    min-width: 100% !important;
+    position: static;
+  }
+
+  .registration-main-form button:nth-child(2) span {
+    min-width: 240px !important;
   }
 
   .name-and-number button {
@@ -1908,6 +1969,7 @@ li a {
     order: 1;
   }
   .add-visiter button {
+    min-height: 63px;
     margin: 3;
   }
 
@@ -1961,5 +2023,106 @@ li a {
 
   .phone-and-mail:nth-child(2) {
     margin-bottom: 20px;
+  }
+
+  .other-sum {
+    border-radius: 0;
+  }
+
+  .other-sum div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .other-content {
+    padding: 0;
+  }
+
+  .check-icon-and-text p {
+    text-align: left;
+  }
+
+  .main-page {
+    height: 100%;
+  }
+
+  .bottom-part {
+    margin-top: 10px;
+  }
+
+  .export,
+  .import {
+    height: 100%;
+    flex: 0 0 50%;
+    margin: auto;
+  }
+
+  nav {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  .right-header {
+    width: 400px;
+  }
+
+  .about-main {
+    text-align: left;
+  }
+  .digit {
+    font-size: 24px !important;
+  }
+}
+
+@media ((min-width: 1500px) and (max-height: 920px)) {
+  section {
+    height: 100%;
+  }
+
+  .content,
+  .invite-content,
+  .pluses-content {
+    height: 100%;
+  }
+
+  .wuan-comp-content {
+    height: 100%;
+  }
+
+  .slider-items {
+    height: 100%;
+  }
+
+  .wuan-companies {
+    height: 100%;
+  }
+
+  .wuam-content {
+    height: 63vh;
+  }
+
+  .pluses {
+    height: 37vh;
+  }
+
+  .registration,
+  .contacts,
+  .province,
+  .forum-content,
+  .forum {
+    height: 100%;
+  }
+
+  .about-content {
+    height: 70vh;
+  }
+
+  .invite {
+    height: 40vh;
+  }
+  .invite-content,
+  .inner-invite,
+  .about-company {
+    height: 100%;
   }
 }

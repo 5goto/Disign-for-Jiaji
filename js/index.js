@@ -218,6 +218,25 @@ $(".member").hover(
   }
 );
 
+$(".other-sum").hover(
+  function () {
+    const image = $(this).find("img");
+    let image_src = $(image).attr("src");
+    image_src = image_src.split(".");
+    $(this)
+      .find("img")
+      .attr("src", `${image_src[0] + "_selected." + image_src[1]}`);
+  },
+  function () {
+    const image = $(this).find("img");
+    let image_src = $(image).attr("src");
+    image_src = image_src.split("_");
+    $(this)
+      .find("img")
+      .attr("src", `${image_src[0] + ".png"}`);
+  }
+);
+
 const details = document.querySelectorAll("details");
 
 // добавить к каждому клику события клика
@@ -259,3 +278,5 @@ $(".other-sum").click(function () {
 $("#small-comp").on("hide.bs.modal", function () {
   $("#small-comp-inner > *").remove();
 });
+
+screen.lockOrientation("landscape");
