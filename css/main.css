@@ -767,7 +767,13 @@ label {
 }
 
 .documents {
-  height: 20vh;
+  height: 100%;
+}
+
+.documents li {
+  padding: 10px;
+  padding-left: 0;
+  padding-top: 0;
 }
 
 .documents ul {
@@ -1440,6 +1446,10 @@ li a {
     height: 100%;
   }
 
+  section > * {
+    height: 100%;
+  }
+
   .reg-button {
     top: 90% !important;
   }
@@ -1519,7 +1529,8 @@ li a {
   }
 
   .track {
-    width: 45%;
+    width: 50%;
+    height: 50%;
     top: 20%;
   }
 
@@ -1539,6 +1550,15 @@ li a {
   .blue-block {
     display: none;
   }
+}
+
+.invite {
+  height: 100%;
+}
+
+.boat {
+  top: 40%;
+  left: 0;
 }
 
 @media (max-width: 576px) {
