@@ -1552,8 +1552,14 @@ li a {
   }
 }
 
-.invite {
+.invite,
+.invite-content {
   height: 100%;
+}
+
+.wave {
+  top: 0% !important;
+  height: auto;
 }
 
 .boat {
