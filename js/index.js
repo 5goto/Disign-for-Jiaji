@@ -1,4 +1,5 @@
 import data from "./company-data.js";
+import companies from "./main-company.js";
 
 $("#expand").click(function () {
   const $text = $("#expandable");
@@ -237,6 +238,25 @@ $(".other-sum").hover(
   }
 );
 
+$(".slider-item").hover(
+  function () {
+    const image = $(this).find("img");
+    let image_src = $(image).attr("src");
+    image_src = image_src.split(".");
+    $(this)
+      .find("img")
+      .attr("src", `${image_src[0] + "_selected." + image_src[1]}`);
+  },
+  function () {
+    const image = $(this).find("img");
+    let image_src = $(image).attr("src");
+    image_src = image_src.split("_");
+    $(this)
+      .find("img")
+      .attr("src", `${image_src[0] + ".png"}`);
+  }
+);
+
 const details = document.querySelectorAll("details");
 
 // добавить к каждому клику события клика
@@ -249,6 +269,20 @@ const details = document.querySelectorAll("details");
       }
     });
   });
+});
+
+$(".slider-item").click(function () {
+  const $modal = $("#main-comp");
+  const index = Number($(this).attr("class").split(" ")[1]);
+
+  const new_title = companies[index].name;
+  const description = companies[index].description;
+  const imgSrc_1 = companies[index].imgSrc[0];
+  const imgSrc_2 = companies[index].imgSrc[1];
+  $modal.find(".modal-title").text(new_title);
+  $modal.find(".main-description").text(description);
+  $modal.find(".main_src_1").attr("src", imgSrc_1);
+  $modal.find(".main_src_2").attr("src", imgSrc_2);
 });
 
 $(".other-sum").click(function () {
