@@ -306,7 +306,7 @@ nav ul a {
 
 .containers-img {
   position: absolute;
-  right: 20%;
+  right: 12%;
   top: 0;
   width: 23%;
 }
@@ -1441,7 +1441,8 @@ li a {
   .fs24 {
     font-size: var(--regular-24) !important;
   }
-  .fs16 {
+  .fs16,
+  .header-link-to-reg-content {
     font-size: var(--regular-16) !important;
   }
   .fs18 {
@@ -1461,5 +1462,149 @@ li a {
   }
   .wuan-map-abs {
     width: calc((25vw + 25vh) / 1.8);
+  }
+  .containers-img {
+    right: 5%;
+  }
+
+  /* main title */
+  .main-title {
+    width: 30%;
+  }
+
+  .right-button,
+  .header-link-to-reg {
+    width: 70%;
+    height: 45%;
+  }
+
+  .header-link-to-reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-header nav {
+    flex: 1 0 70%;
+  }
+
+  .logos img {
+    width: 50%;
+  }
+
+  .track {
+    width: 45%;
+    top: 20%;
+  }
+
+  .wuan-main {
+    flex: 1 0 70%;
+  }
+
+  .invite-content p {
+    margin-bottom: 3px;
+  }
+
+  .invite-content a {
+    width: 300px;
+    height: 40px;
+  }
+
+  .blue-block {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    height: 100%;
+  }
+
+  .content,
+  .invite-content,
+  .pluses-content {
+    width: 100vw;
+    margin: auto;
+    height: 100%;
+  }
+
+  .about-superblock {
+    flex-direction: column;
+  }
+
+  .member-couple {
+    flex-direction: column;
+    width: 80% !important;
+    margin-left: 0;
+  }
+
+  .member {
+    width: 50%;
+    /* margin: auto; */
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .fs24 {
+    font-size: 20px !important;
+    text-align: justify;
+  }
+
+  .about-title {
+    text-align: center;
+  }
+
+  .detailing {
+    order: 0;
+  }
+
+  .company {
+    order: 1;
+  }
+
+  .track {
+    display: none;
+  }
+
+  .center-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-title {
+    width: 80%;
+  }
+
+  .main-page .main-content {
+    justify-content: space-around;
+  }
+
+  header,
+  .left-header,
+  .right-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    font-size: 18px;
+  }
+
+  .right-button {
+    display: none;
+  }
+
+  .check-icon-and-text {
+    width: 80%;
+    margin: auto;
+  }
+
+  .bottom-part {
+    flex: 0 0 10%;
+  }
+
+  .fs48 {
+    font-size: 30px !important;
   }
 }
