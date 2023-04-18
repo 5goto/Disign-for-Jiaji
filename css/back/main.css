@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
 :root {
   --regular-32: calc((1vh + 1vw * 1.2));
   --regular-28: calc((1vh + 1vw));
@@ -12,7 +19,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif !important;
+  font-family: "Inter" !important;
 }
 
 body section {
@@ -31,6 +38,7 @@ body {
 
 .main-page .main-content {
   height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -206,6 +214,7 @@ nav ul a {
 .content {
   height: 100%;
   width: 1500px;
+  /* margin: auto; */
   margin-left: calc((100vw - 1500px) / 2);
   margin-right: calc((100vw - 1500px) / 2);
   padding: 3% 40px 3% 40px;
@@ -219,7 +228,6 @@ nav ul a {
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
-  max-width: 80%;
 }
 
 .member {
@@ -227,14 +235,6 @@ nav ul a {
   display: flex;
   align-items: center;
   transition: 0.3s ease;
-}
-
-.member-couple:nth-child(1) .member:nth-child(1) {
-  margin-right: 20px;
-}
-
-.member:nth-child(2) {
-  margin-left: 20px;
 }
 
 .member-couple .member:hover p {
@@ -325,10 +325,6 @@ nav {
   background-color: #07a2d8;
 }
 
-.comp-desc {
-  font-size: 28px;
-}
-
 .inner-invite a p {
   width: 250px;
   height: 30px;
@@ -350,25 +346,6 @@ nav {
   position: relative;
 }
 
-.main-info-wuan {
-  height: 100%;
-  flex: 1 0 80%;
-}
-
-.main-info-wuan p {
-  min-height: 400px;
-}
-
-/* .map {
-  flex: 0 1 30% !important;
-  min-width: 80% !important;
-}
-
-.wuan-main {
-  height: 100%;
-  flex: 1 0 90%;
-} */
-
 .left .main-info-wuan h3 {
   font-weight: bold;
 }
@@ -381,6 +358,7 @@ nav {
 
 .left,
 .right {
+  /* max-height: 100vh; */
   overflow: hidden;
   flex: 0 0 50%;
 }
@@ -418,7 +396,7 @@ nav {
 
 .boat {
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   left: 5%;
   width: 31%;
 }
@@ -520,9 +498,14 @@ nav {
 
 .wuan-map-abs {
   position: absolute;
+  /* top: -20%; */
   left: 70%;
   width: 400px;
 }
+
+/* .wuan-map-abs:hover {
+  scale: 2;
+} */
 
 .column-row {
   display: flex;
@@ -561,7 +544,7 @@ nav {
 
 .export-text {
   color: #ffb1b1;
-  font-size: 24px;
+  font-size: 24;
 }
 
 .export,
@@ -583,11 +566,6 @@ nav {
   color: #77c5f3;
 }
 
-.other-sum div,
-.other-sum div p {
-  height: 100%;
-}
-
 .year-info p,
 .year-info h3 {
   color: white;
@@ -597,6 +575,7 @@ nav {
   color: white;
   font-size: 18px;
   margin-left: 11px;
+  /* padding-top: 55px; */
 }
 
 .year-info {
@@ -610,11 +589,7 @@ nav {
 
 /* wuan */
 .wuam-content {
-  min-height: 63vh;
-}
-
-.wuan-info {
-  height: 100%;
+  height: 70vh;
 }
 
 .pluses-item .pluses-text {
@@ -626,7 +601,8 @@ nav {
 .pluses-item .pluses-digit {
   font-size: 32px;
   color: #00a3e5;
-  margin: 0 10px 0 0;
+  margin: 0;
+  margin-right: 10px;
 }
 
 .map {
@@ -646,7 +622,7 @@ nav {
 
 .pluses {
   background-color: #cae8fa;
-  height: 40vh;
+  height: 30vh;
 }
 
 .pluses-content {
@@ -665,7 +641,6 @@ nav {
 
 .wuan-main p {
   font-size: 20px;
-  height: 100%;
 }
 
 .wuan-main {
@@ -697,6 +672,10 @@ nav {
   display: none;
 }
 
+.burger {
+  display: none;
+}
+
 .registration-form {
   position: relative;
 }
@@ -704,6 +683,14 @@ nav {
 .registration-form .callback {
   color: #424242;
   position: relative;
+}
+
+.other-sum div {
+  height: 100%;
+}
+
+.other-sum div p {
+  height: 100%;
 }
 
 .callback {
@@ -800,8 +787,11 @@ label {
 .forum-content {
   background-color: #bce6ff;
   height: 100%;
+  /* width: 70%;
+    margin: 0; */
   width: 1310px;
 
+  /* margin-left: calc((100vw - 1500px) / 2); */
   margin-right: calc(100vw - 1310px);
   position: relative;
   margin-left: 0;
@@ -809,6 +799,7 @@ label {
 
 .relative-forume-block {
   width: 60%;
+  /* margin: auto; */
   margin-left: calc((100vw - 1310px) * 0.34);
 }
 
@@ -824,7 +815,9 @@ label {
 }
 
 .documents li {
-  padding: 0 10px 10px 0;
+  padding: 10px;
+  padding-left: 0;
+  padding-top: 0;
 }
 
 .documents ul {
@@ -848,10 +841,6 @@ label {
   font-size: 24px;
 }
 
-.bottom-part h3 {
-  font-weight: 600;
-}
-
 .relative-forume-block .main-h3-forum {
   font-size: 32px;
   font-weight: bold;
@@ -862,7 +851,7 @@ label {
 .globe-img {
   position: absolute;
   left: 79%;
-  bottom: 0;
+  bottom: 0px;
 }
 
 .event .digit {
@@ -879,11 +868,14 @@ label {
 
 .reg-content {
   height: 100%;
+  /* background-color: #ea7363; */
+  /* display: flex; */
 }
 
 .left-reg-form,
 .right-reg-form {
   height: 100%;
+  /* flex: 0 0 50%; */
 }
 
 .left-reg-form {
@@ -927,6 +919,7 @@ label {
   background-color: #77c5f3;
   color: white;
   text-align: center;
+  /* position: relative; */
   border-radius: 3px;
   border: 0 !important;
   transition: 0.3s ease;
@@ -938,6 +931,7 @@ label {
 }
 
 .add-new-visiter p {
+  /* margin-top: 10px; */
   margin-bottom: 0 !important;
   padding: 0;
 }
@@ -1008,8 +1002,9 @@ form .reg-button p {
 .contacts-content {
   height: 100%;
   width: 85%;
+  margin: 0;
   padding: 5% 0 5% 0;
-  margin: 0 0 0 auto;
+  margin-left: auto;
 
   display: flex;
   justify-content: space-between;
@@ -1226,26 +1221,14 @@ li a {
   margin-top: auto;
 }
 
-body .wuan-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.wuan-info .content {
-  flex: 1 0;
-}
-
-.wuan-info .pluses {
-  flex: 0 1;
-}
-
 .comp-desc {
   padding-top: 20px;
 }
 
 .slider-items {
-  height: 210px;
+  height: 310px;
   max-width: 1500px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   /* gap: 10px; */
@@ -1254,7 +1237,7 @@ body .wuan-info {
   cursor: pointer;
   user-select: none;
   scrollbar-width: none;
-  margin: auto auto 0px;
+  margin-bottom: 40px;
 }
 
 .wuan-companies {
@@ -1370,11 +1353,6 @@ body .wuan-info {
     width: 40%;
   }
 
-  .pluses {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
   .about-content {
     height: 70vh;
   }
@@ -1406,12 +1384,10 @@ body .wuan-info {
 
   .wuam-content {
     height: 63vh;
-    height: auto;
-    /* min-height: 63vh; */
   }
 
   .pluses {
-    height: 100%;
+    height: 37vh;
   }
 
   .pluses-content {
@@ -1551,7 +1527,7 @@ body .wuan-info {
   }
 
   .wave {
-    top: 0 !important;
+    top: 0% !important;
     height: auto;
   }
 
@@ -1633,23 +1609,19 @@ body .wuan-info {
     height: 100%;
   }
 
+  .burger {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+
   .content,
   .invite-content,
   .pluses-content {
     width: 100vw;
     margin: auto;
     height: 100%;
-  }
-
-  .content,
-  .invite {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .invite p {
-    text-align: justify;
-    padding-bottom: 20px;
   }
 
   .about-superblock {
@@ -1660,20 +1632,6 @@ body .wuan-info {
     flex-direction: column;
     width: 80% !important;
     margin-left: 0;
-  }
-
-  .padding-text {
-    text-align: left;
-  }
-
-  .inner-invite a {
-    min-width: 100% !important;
-    margin: 0 !important;
-    margin-right: 0;
-  }
-
-  .inner-invite a p {
-    flex: 1 0 100%;
   }
 
   .member {
@@ -1723,38 +1681,8 @@ body .wuan-info {
   }
 
   .detailing {
-    order: 4;
+    order: 0;
     margin: 0;
-  }
-
-  .detail-frame {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  .detail-frame:nth-child(1) {
-    margin-top: 10px;
-  }
-
-  .top-logo {
-    display: none;
-  }
-
-  .about-title {
-    text-align: left;
-    margin-top: 20px;
-  }
-
-  .inner-invite a {
-    margin: 0;
-  }
-
-  .create-line {
-    margin: 0 !important;
-  }
-
-  .detail-icon {
-    margin-bottom: 8px;
   }
 
   .company {
@@ -1867,8 +1795,8 @@ body .wuan-info {
   .invite {
     max-height: 750px;
     min-height: 300px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 3%;
+    padding-top: 3%;
   }
 
   .fs48 {
@@ -1938,12 +1866,8 @@ body .wuan-info {
     text-align: left;
   }
 
-  /* .main-articles {
+  .main-articles {
     flex-direction: column;
-  } */
-
-  .export {
-    margin-top: 0 !important;
   }
 
   .column-elements {
@@ -2148,7 +2072,7 @@ body .wuan-info {
   }
   .add-visiter button {
     min-height: 63px;
-    margin: 3px;
+    margin: 3;
   }
 
   .right-forms-layer {
@@ -2170,7 +2094,8 @@ body .wuan-info {
     text-align: left;
   }
   .direct-contact {
-    padding: 10px 10px 10px 40px;
+    padding: 10px;
+    padding-left: 40px;
   }
 
   footer {
@@ -2198,7 +2123,7 @@ body .wuan-info {
     margin-bottom: 20px;
   }
 
-  .phone-and-mail:nth-child(3) {
+  .phone-and-mail:nth-child(2) {
     margin-bottom: 20px;
   }
 
@@ -2279,14 +2204,9 @@ body .wuan-info {
   .member-couple {
     padding: 0;
   }
-
-  body .invate {
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-  }
 }
 
-@media (min-width: 1500px) and (max-height: 920px) {
+@media ((min-width: 1500px) and (max-height: 920px)) {
   section {
     height: 100%;
   }
@@ -2315,7 +2235,6 @@ body .wuan-info {
 
   .pluses {
     height: 37vh;
-    padding-bottom: 40px;
   }
 
   .registration,
@@ -2327,46 +2246,15 @@ body .wuan-info {
   }
 
   .about-content {
-    height: 100%;
+    height: 70vh;
   }
 
   .invite {
-    height: 100%;
+    height: 40vh;
   }
   .invite-content,
   .inner-invite,
-  .about-company,
-  .other-companies {
+  .about-company {
     height: 100%;
-  }
-
-  .blue-block,
-  .boat,
-  .wave {
-    display: none;
-  }
-
-  .registration-form,
-  .callback,
-  .callback .right-form,
-  .callback .left-from,
-  .contact-data {
-    height: 100%;
-  }
-
-  .right-form {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 400px) {
-  .main-articles {
-    flex-direction: column;
-  }
-
-  .column-elements {
-    width: 100%;
-    text-align: center;
   }
 }

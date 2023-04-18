@@ -313,4 +313,7 @@ $("#small-comp").on("hide.bs.modal", function () {
   $("#small-comp-inner > *").remove();
 });
 
-screen.lockOrientation("landscape");
+// if (window.devicePixelRatio !== 1) {
+//   let scaleValue = 1 / window.devicePixelRatio;
+//   $("body").css("transform", "scale(" + scaleValue + ")");
+// }
